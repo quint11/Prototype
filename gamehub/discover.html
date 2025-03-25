@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏平台 - 发现</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- 状态栏 -->
+    <div class="status-bar bg-black text-white h-11 flex justify-between items-center px-5 text-xs">
+        <span>9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="bg-white shadow-sm">
+        <div class="flex justify-between items-center px-4 py-3">
+            <h1 class="text-xl font-bold">发现</h1>
+            <div class="flex space-x-4">
+                <i class="fas fa-search text-gray-600 text-xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="pb-20">
+        <!-- 热门游戏 -->
+        <div class="p-4">
+            <h2 class="text-lg font-bold mb-3">热门游戏</h2>
+            <div class="flex overflow-x-auto space-x-4 pb-4">
+                <div class="flex-none w-32">
+                    <div class="rounded-xl overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1616856714591-5e85b3e75903?auto=format&fit=crop&w=300&q=80" 
+                             alt="游戏图片" 
+                             class="w-full h-32 object-cover">
+                        <div class="p-2 bg-white">
+                            <h3 class="font-medium text-sm">原神</h3>
+                            <p class="text-xs text-gray-500">开放世界</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-none w-32">
+                    <div class="rounded-xl overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=300&q=80" 
+                             alt="游戏图片" 
+                             class="w-full h-32 object-cover">
+                        <div class="p-2 bg-white">
+                            <h3 class="font-medium text-sm">王者荣耀</h3>
+                            <p class="text-xs text-gray-500">MOBA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-none w-32">
+                    <div class="rounded-xl overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=300&q=80" 
+                             alt="游戏图片" 
+                             class="w-full h-32 object-cover">
+                        <div class="p-2 bg-white">
+                            <h3 class="font-medium text-sm">和平精英</h3>
+                            <p class="text-xs text-gray-500">射击</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新游推荐 -->
+        <div class="p-4">
+            <h2 class="text-lg font-bold mb-3">新游推荐</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl p-3 flex space-x-4 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1614294148960-9aa740632a87?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-20 h-20 rounded-xl object-cover">
+                    <div class="flex-1">
+                        <h3 class="font-bold">崩坏：星穹铁道</h3>
+                        <p class="text-sm text-gray-500">科幻RPG</p>
+                        <div class="flex items-center mt-1">
+                            <span class="text-xs text-blue-500">预约中</span>
+                            <span class="text-xs text-gray-500 ml-2">238.5万人预约</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm">预约</button>
+                </div>
+
+                <div class="bg-white rounded-xl p-3 flex space-x-4 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-20 h-20 rounded-xl object-cover">
+                    <div class="flex-1">
+                        <h3 class="font-bold">幻塔</h3>
+                        <p class="text-sm text-gray-500">开放世界</p>
+                        <div class="flex items-center mt-1">
+                            <span class="text-xs text-green-500">新游上线</span>
+                            <span class="text-xs text-gray-500 ml-2">125.3万人在玩</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm">下载</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏分类 -->
+        <div class="p-4">
+            <h2 class="text-lg font-bold mb-3">游戏分类</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-xl p-4 flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-gamepad text-blue-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">动作游戏</h3>
+                        <p class="text-xs text-gray-500">1,234款游戏</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-4 flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-running text-green-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">冒险游戏</h3>
+                        <p class="text-xs text-gray-500">987款游戏</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-4 flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-chess text-purple-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">策略游戏</h3>
+                        <p class="text-xs text-gray-500">567款游戏</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-4 flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-futbol text-red-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">体育游戏</h3>
+                        <p class="text-xs text-gray-500">345款游戏</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+        <div class="flex justify-around items-center h-20">
+            <a href="home.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-home text-2xl"></i>
+                <span class="text-xs mt-1">首页</span>
+            </a>
+            <a href="discover.html" class="flex flex-col items-center text-blue-500">
+                <i class="fas fa-compass text-2xl"></i>
+                <span class="text-xs mt-1">发现</span>
+            </a>
+            <a href="library.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-gamepad text-2xl"></i>
+                <span class="text-xs mt-1">游戏库</span>
+            </a>
+            <a href="profile.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-user text-2xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

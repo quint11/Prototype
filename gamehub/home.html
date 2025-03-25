@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏平台 - 首页</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- 状态栏 -->
+    <div class="status-bar bg-black text-white h-11 flex justify-between items-center px-5 text-xs">
+        <span>9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="bg-white shadow-sm">
+        <div class="flex justify-between items-center px-4 py-3">
+            <h1 class="text-xl font-bold">游戏中心</h1>
+            <div class="flex space-x-4">
+                <i class="fas fa-bell text-gray-600 text-xl"></i>
+                <i class="fas fa-cog text-gray-600 text-xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="pb-20">
+        <!-- 热门游戏轮播 -->
+        <div class="p-4">
+            <div class="relative rounded-2xl overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=2000&q=80" 
+                     alt="游戏封面" 
+                     class="w-full h-48 object-cover">
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                    <h3 class="text-white text-xl font-bold">赛博朋克 2077</h3>
+                    <p class="text-gray-200">开放世界动作冒险游戏</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏分类 -->
+        <div class="p-4">
+            <h2 class="text-lg font-bold mb-3">游戏分类</h2>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 bg-blue-500 rounded-2xl flex items-center justify-center mb-1">
+                        <i class="fas fa-gamepad text-white text-2xl"></i>
+                    </div>
+                    <span class="text-xs">动作</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 bg-green-500 rounded-2xl flex items-center justify-center mb-1">
+                        <i class="fas fa-running text-white text-2xl"></i>
+                    </div>
+                    <span class="text-xs">冒险</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 bg-purple-500 rounded-2xl flex items-center justify-center mb-1">
+                        <i class="fas fa-chess text-white text-2xl"></i>
+                    </div>
+                    <span class="text-xs">策略</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 bg-red-500 rounded-2xl flex items-center justify-center mb-1">
+                        <i class="fas fa-futbol text-white text-2xl"></i>
+                    </div>
+                    <span class="text-xs">体育</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 推荐游戏 -->
+        <div class="p-4">
+            <h2 class="text-lg font-bold mb-3">推荐游戏</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl p-3 flex space-x-4 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-20 h-20 rounded-xl object-cover">
+                    <div class="flex-1">
+                        <h3 class="font-bold">艾尔登法环</h3>
+                        <p class="text-sm text-gray-500">动作角色扮演</p>
+                        <div class="flex items-center mt-1">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star-half-alt text-xs"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">4.5</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm">下载</button>
+                </div>
+
+                <div class="bg-white rounded-xl p-3 flex space-x-4 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-20 h-20 rounded-xl object-cover">
+                    <div class="flex-1">
+                        <h3 class="font-bold">荒野大镖客2</h3>
+                        <p class="text-sm text-gray-500">开放世界冒险</p>
+                        <div class="flex items-center mt-1">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                                <i class="fas fa-star text-xs"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">5.0</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-xl text-sm">下载</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+        <div class="flex justify-around items-center h-20">
+            <a href="home.html" class="flex flex-col items-center text-blue-500">
+                <i class="fas fa-home text-2xl"></i>
+                <span class="text-xs mt-1">首页</span>
+            </a>
+            <a href="discover.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-compass text-2xl"></i>
+                <span class="text-xs mt-1">发现</span>
+            </a>
+            <a href="library.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-gamepad text-2xl"></i>
+                <span class="text-xs mt-1">游戏库</span>
+            </a>
+            <a href="profile.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-user text-2xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

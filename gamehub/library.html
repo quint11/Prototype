@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏平台 - 游戏库</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- 状态栏 -->
+    <div class="status-bar bg-black text-white h-11 flex justify-between items-center px-5 text-xs">
+        <span>9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="bg-white shadow-sm">
+        <div class="flex justify-between items-center px-4 py-3">
+            <h1 class="text-xl font-bold">游戏库</h1>
+            <div class="flex space-x-4">
+                <i class="fas fa-sort text-gray-600 text-xl"></i>
+                <i class="fas fa-filter text-gray-600 text-xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="pb-20">
+        <!-- 分类标签 -->
+        <div class="bg-white p-4">
+            <div class="flex space-x-4 overflow-x-auto">
+                <button class="px-4 py-2 bg-blue-500 text-white rounded-full text-sm whitespace-nowrap">全部</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm whitespace-nowrap">已下载</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm whitespace-nowrap">收藏</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm whitespace-nowrap">最近玩过</button>
+                <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm whitespace-nowrap">更新</button>
+            </div>
+        </div>
+
+        <!-- 游戏列表 -->
+        <div class="p-4 space-y-4">
+            <!-- 已下载游戏 -->
+            <div class="bg-white rounded-xl p-3 flex space-x-4 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=300&q=80" 
+                     alt="游戏图片" 
+                     class="w-20 h-20 rounded-xl object-cover">
+                <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">艾尔登法环</h3>
+                            <p class="text-sm text-gray-500">动作角色扮演</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-xs text-gray-400 mr-2">12.3GB</span>
+                            <i class="fas fa-ellipsis-v text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <div class="flex-1">
+                            <div class="h-1 bg-gray-200 rounded-full">
+                                <div class="h-1 bg-blue-500 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-2">已安装</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下载中的游戏 -->
+            <div class="bg-white rounded-xl p-3 flex space-x-4 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=300&q=80" 
+                     alt="游戏图片" 
+                     class="w-20 h-20 rounded-xl object-cover">
+                <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">荒野大镖客2</h3>
+                            <p class="text-sm text-gray-500">开放世界冒险</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-xs text-gray-400 mr-2">45.6GB</span>
+                            <i class="fas fa-pause text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <div class="flex-1">
+                            <div class="h-1 bg-gray-200 rounded-full">
+                                <div class="h-1 bg-blue-500 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-2">65%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 等待下载的游戏 -->
+            <div class="bg-white rounded-xl p-3 flex space-x-4 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=300&q=80" 
+                     alt="游戏图片" 
+                     class="w-20 h-20 rounded-xl object-cover">
+                <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">巫师3</h3>
+                            <p class="text-sm text-gray-500">角色扮演</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-xs text-gray-400 mr-2">35.2GB</span>
+                            <i class="fas fa-download text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <div class="flex-1">
+                            <div class="h-1 bg-gray-200 rounded-full">
+                                <div class="h-1 bg-gray-200 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-2">等待中</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最近玩过 -->
+        <div class="p-4">
+            <h2 class="text-lg font-bold mb-3">最近玩过</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1616856714591-5e85b3e75903?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-full h-32 object-cover">
+                    <div class="p-2">
+                        <h3 class="font-medium">原神</h3>
+                        <p class="text-xs text-gray-500">上次游玩：2小时前</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-full h-32 object-cover">
+                    <div class="p-2">
+                        <h3 class="font-medium">王者荣耀</h3>
+                        <p class="text-xs text-gray-500">上次游玩：昨天</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+        <div class="flex justify-around items-center h-20">
+            <a href="home.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-home text-2xl"></i>
+                <span class="text-xs mt-1">首页</span>
+            </a>
+            <a href="discover.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-compass text-2xl"></i>
+                <span class="text-xs mt-1">发现</span>
+            </a>
+            <a href="library.html" class="flex flex-col items-center text-blue-500">
+                <i class="fas fa-gamepad text-2xl"></i>
+                <span class="text-xs mt-1">游戏库</span>
+            </a>
+            <a href="profile.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-user text-2xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

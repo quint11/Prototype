@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏平台 - 游戏详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- 状态栏 -->
+    <div class="status-bar bg-black text-white h-11 flex justify-between items-center px-5 text-xs">
+        <span>9:41</span>
+        <div class="flex items-center space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="bg-white shadow-sm">
+        <div class="flex justify-between items-center px-4 py-3">
+            <div class="flex items-center">
+                <a href="home.html" class="mr-3">
+                    <i class="fas fa-chevron-left text-gray-600 text-xl"></i>
+                </a>
+                <h1 class="text-xl font-bold">游戏详情</h1>
+            </div>
+            <div class="flex space-x-4">
+                <i class="fas fa-share text-gray-600 text-xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="pb-20">
+        <!-- 游戏封面和基本信息 -->
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=2000&q=80" 
+                 alt="游戏封面" 
+                 class="w-full h-48 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                <h2 class="text-white text-2xl font-bold">赛博朋克 2077</h2>
+                <p class="text-gray-200">开放世界动作冒险游戏</p>
+            </div>
+        </div>
+
+        <!-- 游戏信息卡片 -->
+        <div class="bg-white p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center">
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-gray-600 ml-2">4.5 (12.3万评分)</span>
+                </div>
+                <button class="bg-blue-500 text-white px-6 py-2 rounded-xl font-medium">
+                    下载
+                </button>
+            </div>
+            <div class="flex space-x-4 text-center text-gray-600 text-sm">
+                <div class="flex-1">
+                    <p class="font-bold text-black">12.3GB</p>
+                    <p>大小</p>
+                </div>
+                <div class="flex-1">
+                    <p class="font-bold text-black">17+</p>
+                    <p>年龄</p>
+                </div>
+                <div class="flex-1">
+                    <p class="font-bold text-black">1.2亿</p>
+                    <p>下载</p>
+                </div>
+                <div class="flex-1">
+                    <p class="font-bold text-black">动作</p>
+                    <p>类型</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏介绍 -->
+        <div class="bg-white mt-2 p-4">
+            <h3 class="text-lg font-bold mb-2">游戏介绍</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                在这款开放世界动作冒险游戏中，你将扮演一名赏金猎人，在夜之城这座巨型都市中展开冒险。游戏融合了角色扮演和第一人称射击元素，让你在一个充满未来科技的世界中自由探索。
+            </p>
+            <button class="text-blue-500 text-sm mt-2">展开全部</button>
+        </div>
+
+        <!-- 游戏截图 -->
+        <div class="bg-white mt-2 p-4">
+            <h3 class="text-lg font-bold mb-2">游戏截图</h3>
+            <div class="flex overflow-x-auto space-x-3">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80" 
+                     alt="游戏截图" 
+                     class="w-48 h-32 rounded-lg object-cover flex-none">
+                <img src="https://images.unsplash.com/photo-1542751371-6533d324d67f?auto=format&fit=crop&w=800&q=80" 
+                     alt="游戏截图" 
+                     class="w-48 h-32 rounded-lg object-cover flex-none">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80" 
+                     alt="游戏截图" 
+                     class="w-48 h-32 rounded-lg object-cover flex-none">
+            </div>
+        </div>
+
+        <!-- 评论区 -->
+        <div class="bg-white mt-2 p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">玩家评论</h3>
+                <button class="text-blue-500 text-sm">查看全部</button>
+            </div>
+            <div class="space-y-4">
+                <div class="flex space-x-3">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" 
+                         alt="用户头像" 
+                         class="w-10 h-10 rounded-full">
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-medium">游戏玩家</h4>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">画面非常震撼，剧情也很吸引人，玩了100多个小时了还在探索新的任务。</p>
+                        <p class="text-gray-400 text-xs mt-1">2024-01-15</p>
+                    </div>
+                </div>
+                <div class="flex space-x-3">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&q=80" 
+                         alt="用户头像" 
+                         class="w-10 h-10 rounded-full">
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center mb-1">
+                            <h4 class="font-medium">夜之城玩家</h4>
+                            <div class="flex text-yellow-400 text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">游戏优化还需要改进，但整体体验不错，特别是支线任务设计得很用心。</p>
+                        <p class="text-gray-400 text-xs mt-1">2024-01-14</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 相关推荐 -->
+        <div class="bg-white mt-2 p-4">
+            <h3 class="text-lg font-bold mb-3">相关推荐</h3>
+            <div class="flex overflow-x-auto space-x-4">
+                <div class="flex-none w-32">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-full h-32 rounded-lg object-cover mb-2">
+                    <h4 class="font-medium text-sm">艾尔登法环</h4>
+                    <p class="text-xs text-gray-500">动作角色扮演</p>
+                </div>
+                <div class="flex-none w-32">
+                    <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-full h-32 rounded-lg object-cover mb-2">
+                    <h4 class="font-medium text-sm">荒野大镖客2</h4>
+                    <p class="text-xs text-gray-500">开放世界冒险</p>
+                </div>
+                <div class="flex-none w-32">
+                    <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=300&q=80" 
+                         alt="游戏图片" 
+                         class="w-full h-32 rounded-lg object-cover mb-2">
+                    <h4 class="font-medium text-sm">巫师3</h4>
+                    <p class="text-xs text-gray-500">角色扮演</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
