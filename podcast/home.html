@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 小宇宙播客</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .status-bar {
+            height: 44px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+        .nav-bar {
+            height: 44px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        .nav-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .tab-bar {
+            height: 83px;
+            background: #fff;
+            border-top: 1px solid #e5e5ea;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #8e8e93;
+            font-size: 10px;
+        }
+        .tab-item.active {
+            color: #007aff;
+        }
+        .tab-item i {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .content {
+            height: calc(100% - 44px - 83px - 44px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .episode-card {
+            background: #fff;
+            border-radius: 12px;
+            margin: 12px 16px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .episode-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .episode-info {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #8e8e93;
+        }
+        .episode-duration {
+            margin-left: auto;
+        }
+        .cover-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 16px 12px;
+        }
+        .mini-player {
+            height: 72px;
+            background: #fff;
+            border-top: 1px solid #e5e5ea;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            position: absolute;
+            bottom: 83px;
+            width: 100%;
+        }
+        .mini-player-image {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .mini-player-info {
+            margin-left: 12px;
+            flex: 1;
+        }
+        .mini-player-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .mini-player-author {
+            font-size: 12px;
+            color: #8e8e93;
+        }
+        .mini-player-controls {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-bar">
+        <span>9:41</span>
+        <div>
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi ml-2"></i>
+            <i class="fas fa-battery-full ml-2"></i>
+        </div>
+    </div>
+    
+    <div class="nav-bar">
+        <div class="nav-title">小宇宙</div>
+        <div>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-bell ml-4"></i>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="section-title">今日推荐</div>
+        
+        <div class="episode-card">
+            <img src="https://images.unsplash.com/photo-1593697909683-bccb1b9e68a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="cover-image">
+            <div class="episode-title">如何培养深度思考能力？与哲学家周国平的对话</div>
+            <div class="episode-info">
+                <span>文化有限</span>
+                <span class="episode-duration">42:15</span>
+            </div>
+        </div>
+        
+        <div class="section-title">继续收听</div>
+        
+        <div class="episode-card">
+            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="cover-image">
+            <div class="episode-title">科技早知道：AI将如何改变我们的工作方式？</div>
+            <div class="episode-info">
+                <span>硅谷101</span>
+                <span class="episode-duration">56:30</span>
+            </div>
+        </div>
+        
+        <div class="section-title">热门播客</div>
+        
+        <div class="flex overflow-x-auto px-4 pb-4" style="scroll-snap-type: x mandatory;">
+            <div class="flex-none mr-4" style="scroll-snap-align: start;">
+                <div class="w-32 h-32 rounded-lg bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-2 text-sm font-medium text-center">忽左忽右</div>
+            </div>
+            <div class="flex-none mr-4" style="scroll-snap-align: start;">
+                <div class="w-32 h-32 rounded-lg bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-2 text-sm font-medium text-center">故事FM</div>
+            </div>
+            <div class="flex-none mr-4" style="scroll-snap-align: start;">
+                <div class="w-32 h-32 rounded-lg bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-2 text-sm font-medium text-center">日谈公园</div>
+            </div>
+            <div class="flex-none mr-4" style="scroll-snap-align: start;">
+                <div class="w-32 h-32 rounded-lg bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-2 text-sm font-medium text-center">随机波动</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mini-player">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="mini-player-image">
+        <div class="mini-player-info">
+            <div class="mini-player-title">如何培养深度思考能力？</div>
+            <div class="mini-player-author">文化有限</div>
+        </div>
+        <div class="mini-player-controls">
+            <i class="fas fa-play text-xl text-blue-500"></i>
+        </div>
+    </div>
+    
+    <div class="tab-bar">
+        <div class="tab-item active">
+            <i class="fas fa-home"></i>
+            <span>首页</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-compass"></i>
+            <span>发现</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-search"></i>
+            <span>搜索</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收听历史 - 小宇宙播客</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .status-bar {
+            height: 44px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+        .nav-bar {
+            height: 44px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        .nav-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .tab-bar {
+            height: 83px;
+            background: #fff;
+            border-top: 1px solid #e5e5ea;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #8e8e93;
+            font-size: 10px;
+        }
+        .tab-item.active {
+            color: #007aff;
+        }
+        .tab-item i {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .content {
+            height: calc(100% - 44px - 83px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .history-item {
+            background: #fff;
+            padding: 16px;
+            border-bottom: 1px solid #e5e5ea;
+            display: flex;
+            align-items: center;
+        }
+        .history-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .history-info {
+            margin-left: 12px;
+            flex: 1;
+        }
+        .history-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .history-author {
+            font-size: 14px;
+            color: #8e8e93;
+        }
+        .history-progress {
+            height: 3px;
+            background: #e5e5ea;
+            border-radius: 2px;
+            margin-top: 8px;
+            position: relative;
+        }
+        .history-progress-bar {
+            height: 100%;
+            background: #007aff;
+            border-radius: 2px;
+            width: 70%;
+        }
+        .history-date {
+            font-size: 12px;
+            color: #8e8e93;
+            margin-top: 4px;
+        }
+        .section-title {
+            font-size: 14px;
+            color: #8e8e93;
+            padding: 8px 16px;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-bar">
+        <span>9:41</span>
+        <div>
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi ml-2"></i>
+            <i class="fas fa-battery-full ml-2"></i>
+        </div>
+    </div>
+    
+    <div class="nav-bar">
+        <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="nav-title">收听历史</div>
+        <div>
+            <i class="fas fa-trash-alt"></i>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="section-title">今天</div>
+        
+        <div class="history-item">
+            <img src="https://images.unsplash.com/photo-1593697909683-bccb1b9e68a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="history-image">
+            <div class="history-info">
+                <div class="history-title">如何培养深度思考能力？与哲学家周国平的对话</div>
+                <div class="history-author">文化有限</div>
+                <div class="history-progress">
+                    <div class="history-progress-bar"></div>
+                </div>
+                <div class="history-date">今天 08:30</div>
+            </div>
+        </div>
+        
+        <div class="history-item">
+            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="history-image">
+            <div class="history-info">
+                <div class="history-title">科技早知道：AI将如何改变我们的工作方式？</div>
+                <div class="history-author">硅谷101</div>
+                <div class="history-progress">
+                    <div class="history-progress-bar" style="width: 45%;"></div>
+                </div>
+                <div class="history-date">今天 07:15</div>
+            </div>
+        </div>
+        
+        <div class="section-title">昨天</div>
+        
+        <div class="history-item">
+            <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="history-image">
+            <div class="history-info">
+                <div class="history-title">一个抑郁症患者的自述</div>
+                <div class="history-author">故事FM</div>
+                <div class="history-progress">
+                    <div class="history-progress-bar" style="width: 100%;"></div>
+                </div>
+                <div class="history-date">昨天 18:45</div>
+            </div>
+        </div>
+        
+        <div class="section-title">更早</div>
+        
+        <div class="history-item">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="history-image">
+            <div class="history-info">
+                <div class="history-title">我们为什么要旅行？</div>
+                <div class="history-author">日谈公园</div>
+                <div class="history-progress">
+                    <div class="history-progress-bar" style="width: 80%;"></div>
+                </div>
+                <div class="history-date">5月15日</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tab-bar">
+        <div class="tab-item">
+            <i class="fas fa-home"></i>
+            <span>首页</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-compass"></i>
+            <span>发现</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-search"></i>
+            <span>搜索</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</body>
+</html>

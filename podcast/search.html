@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索 - 小宇宙播客</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .status-bar {
+            height: 44px;
+            background: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+        .nav-bar {
+            height: 44px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        .nav-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .tab-bar {
+            height: 83px;
+            background: #fff;
+            border-top: 1px solid #e5e5ea;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #8e8e93;
+            font-size: 10px;
+        }
+        .tab-item.active {
+            color: #007aff;
+        }
+        .tab-item i {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .content {
+            height: calc(100% - 44px - 83px - 44px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .search-bar {
+            height: 44px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            border-bottom: 1px solid #e5e5ea;
+        }
+        .search-input {
+            flex: 1;
+            background: #f2f2f7;
+            border-radius: 10px;
+            height: 36px;
+            padding: 0 15px;
+            margin-right: 12px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .search-cancel {
+            color: #007aff;
+            font-size: 16px;
+        }
+        .search-tabs {
+            display: flex;
+            border-bottom: 1px solid #e5e5ea;
+            background: #fff;
+        }
+        .search-tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 15px;
+            color: #8e8e93;
+        }
+        .search-tab.active {
+            color: #007aff;
+            border-bottom: 2px solid #007aff;
+        }
+        .search-results {
+            padding: 16px;
+        }
+        .result-item {
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .result-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .result-info {
+            margin-left: 12px;
+            flex: 1;
+        }
+        .result-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .result-author {
+            font-size: 14px;
+            color: #8e8e93;
+        }
+        .result-meta {
+            font-size: 12px;
+            color: #8e8e93;
+            margin-top: 4px;
+        }
+        .mini-player {
+            height: 72px;
+            background: #fff;
+            border-top: 1px solid #e5e5ea;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            position: absolute;
+            bottom: 83px;
+            width: 100%;
+        }
+        .mini-player-image {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .mini-player-info {
+            margin-left: 12px;
+            flex: 1;
+        }
+        .mini-player-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .mini-player-author {
+            font-size: 12px;
+            color: #8e8e93;
+        }
+        .mini-player-controls {
+            margin-left: 16px;
+        }
+        .recent-search {
+            padding: 16px;
+        }
+        .recent-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .recent-tag {
+            display: inline-block;
+            background: #f2f2f7;
+            border-radius: 16px;
+            padding: 8px 16px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-bar">
+        <span>9:41</span>
+        <div>
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi ml-2"></i>
+            <i class="fas fa-battery-full ml-2"></i>
+        </div>
+    </div>
+    
+    <div class="nav-bar">
+        <div class="nav-title">搜索</div>
+        <div>
+            <i class="fas fa-bell"></i>
+        </div>
+    </div>
+    
+    <div class="search-bar">
+        <input type="text" placeholder="搜索播客、单集或创作者" class="search-input">
+        <div class="search-cancel">取消</div>
+    </div>
+    
+    <div class="search-tabs">
+        <div class="search-tab active">全部</div>
+        <div class="search-tab">播客</div>
+        <div class="search-tab">单集</div>
+    </div>
+    
+    <div class="content">
+        <div class="recent-search">
+            <div class="recent-title">最近搜索</div>
+            <div>
+                <span class="recent-tag">科技</span>
+                <span class="recent-tag">音乐</span>
+                <span class="recent-tag">文化有限</span>
+                <span class="recent-tag">商业</span>
+                <span class="recent-tag">心理学</span>
+            </div>
+        </div>
+        
+        <div class="search-results">
+            <div class="result-item">
+                <img src="https://images.unsplash.com/photo-1593697909683-bccb1b9e68a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="result-image">
+                <div class="result-info">
+                    <div class="result-title">文化有限</div>
+                    <div class="result-author">大壹、超哥、星光</div>
+                    <div class="result-meta">3.2万订阅 · 泛文化</div>
+                </div>
+            </div>
+            
+            <div class="result-item">
+                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="result-image">
+                <div class="result-info">
+                    <div class="result-title">科技早知道</div>
+                    <div class="result-author">硅谷101</div>
+                    <div class="result-meta">1.8万订阅 · 科技</div>
+                </div>
+            </div>
+            
+            <div class="result-item">
+                <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="result-image">
+                <div class="result-info">
+                    <div class="result-title">故事FM</div>
+                    <div class="result-author">爱哲</div>
+                    <div class="result-meta">4.5万订阅 · 故事</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mini-player">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="mini-player-image">
+        <div class="mini-player-info">
+            <div class="mini-player-title">如何培养深度思考能力？</div>
+            <div class="mini-player-author">文化有限</div>
+        </div>
+        <div class="mini-player-controls">
+            <i class="fas fa-play text-xl text-blue-500"></i>
+        </div>
+    </div>
+    
+    <div class="tab-bar">
+        <div class="tab-item">
+            <i class="fas fa-home"></i>
+            <span>首页</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-compass"></i>
+            <span>发现</span>
+        </div>
+        <div class="tab-item active">
+            <i class="fas fa-search"></i>
+            <span>搜索</span>
+        </div>
+        <div class="tab-item">
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</body>
+</html>
