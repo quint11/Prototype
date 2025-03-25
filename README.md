@@ -1,7 +1,7 @@
 # Prototype
 
 这是一个高保真原型设计项目，使用 HTML + Tailwind CSS 实现，旨在提供接近真实 App 的用户界面和交互体验。
-
+![示例](podcast/preview.png)
 
 ## 如何复刻？
 ### 进入Deepseek https://chat.deepseek.com/
